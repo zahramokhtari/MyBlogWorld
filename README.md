@@ -1,3 +1,7 @@
+Here's your README updated with the Docker image part:
+
+---
+
 # MyBlogWorld
 
 MyBlogWorld is a Django-based web application for creating and managing blog posts. It allows users to register, create, view, and manage their blog posts. Each post can be categorized into different types for better organization.
@@ -65,6 +69,16 @@ To run the project locally, follow these steps:
 - Sign up for an account to create your own blog posts.
 - Use the navigation links to filter posts by type or create a new post.
 - Click on a post title to view its details.
+
+## Docker Image
+
+You can also run MyBlogWorld using Docker. To do this, execute the following command:
+
+```bash
+docker run -d -p 8080:80 zahramm/myblogworld:latest
+```
+
+This command will download the Docker image from Docker Hub and run it as a container, mapping port 8080 on your host to port 80 inside the container.
 
 ## Contributing
 
