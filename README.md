@@ -24,7 +24,7 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/MyBlogWorld.git
+   git clone https://github.com/zahramokhtari/MyBlogWorld.git
    ```
 
 2. Navigate to the project directory:
