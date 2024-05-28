@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Account Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 </head>
 <body class="container py-5">
     <div class="text-center">
-        <h1 class="mb-4">Welcome to Your Account</h1>
+        <h1 class="mb-4">Welcome to Your Account {{ user }}</h1>
         <p class="lead">Here you can manage your account settings.</p>
     </div>
     <div class="row justify-content-center mt-5">

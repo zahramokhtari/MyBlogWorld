@@ -3,15 +3,22 @@ from .models import Post
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView, CreateView
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import LoginView
+
+
+class CustomLoginView(LoginView):
+    template_name = 'registration/login.html'
+    authentication_form = AuthenticationForm
 
 
 def home(request):
     return render(request, 'home.html')
 
 
-@login_required
+@login_required(login_url='/accounts/login')
 def account_home(request):
-    return render(request, 'account_home.html')
+    return render(request, 'account_home.html', {'user': request.user})
 
 
 def post_list(request):
@@ -19,7 +26,7 @@ def post_list(request):
     return render(request, 'post_list.html', {'posts': posts})
 
 
-@login_required
+@login_required(login_url='/accounts/login')
 def create_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)

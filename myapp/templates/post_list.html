@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Post List</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <style>
         body {
             background-color: #f8f9fa;
@@ -41,7 +43,7 @@
         </ul>
         <form method="post" action="{% url 'account_home' %}">
             {% csrf_token %}
-            <button type="submit" class="btn btn-secondary mt-3 back-btn">Back</button>
+            <button type="submit" class="btn btn-secondary mt-3 back-btn">Profile</button>
         </form>
     </div>
 </body>

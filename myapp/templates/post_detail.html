@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ post.title }}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <style>
         body {
             background-color: #f8f9fa;
@@ -58,7 +60,7 @@
         {% endif %}
         <form method="get" action="{% url 'post_list' %}">
             {% csrf_token %}
-            <button type="submit" class="btn btn-secondary back-btn">Back</button>
+            <button type="submit" class="btn btn-secondary back-btn">Posts List</button>
         </form>
     </div>
 </body>
